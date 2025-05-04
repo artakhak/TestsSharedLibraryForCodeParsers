@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup Label="Globals">
+		<SccProjectName>SAK</SccProjectName>
+		<SccProvider>SAK</SccProvider>
+		<SccAuxPath>SAK</SccAuxPath>
+		<SccLocalPath>SAK</SccLocalPath>
+		<TargetFramework>net6.0</TargetFramework>
+		<PackageVersion>1.0.3</PackageVersion>
+		<Version>1.0.3</Version>
+		<EnableDefaultItems>false</EnableDefaultItems>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<Authors>Artak Hakobyan</Authors>
+		<Company>OROptimizer</Company>
+		<Product>TestsSharedLibraryForCodeParsers</Product>
+		<Description>
+			A library for test projects for code parsers (such as UniversalExpressionParser).
+			The interfaces/classes in this library most probably improvements will be made in the
+			future to the design of interfaces in this library.
+			Therefore, use this library at your own risk.
+		</Description>
+		<Copyright>Copyright 2022 (c) OROptimizer. All rights reserved.</Copyright>
+		<PackageProjectUrl>https://github.com/artakhak/TestsSharedLibraryForCodeParsers</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/artakhak/TestsSharedLibraryForCodeParsers</RepositoryUrl>
+		<PackageTags>tests</PackageTags>
+		<PackageReleaseNotes>
+			-Couple of small changes to adjust for breaking changes in UniversalExpressionParser
+		</PackageReleaseNotes>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="CodeGeneration\CharacterTypeProbabilityData.cs" />
+		<Compile Include="CodeGeneration\CodeGenerationHelper.cs" />
+		<Compile Include="CodeGeneration\CommentMarkersData.cs" />
+		<Compile Include="CodeGeneration\CommentMarkerType.cs" />
+		<Compile Include="CodeGeneration\GeneratedCharacterType.cs" />
+		<Compile Include="CodeGeneration\ICodeGeneratorParametersProvider.cs" />
+		<Compile Include="CodeGeneration\WhitespaceCommentFlags.cs" />
+		<Compile Include="CodeGeneration\WhitespaceFlags.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="LICENSE.txt" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis" Version="4.13.0" />
+		<PackageReference Include="NeoSmart.AsyncLock" Version="3.2.1" />
+		<PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
+		<PackageReference Include="JetBrains.Annotations" Version="2021.2.0" PrivateAssets="all" ExcludeAssets="runtime">
+			<IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="OROptimizer.Shared" Version="2.2.0" />
+		<PackageReference Include="TestsSharedLibrary" Version="1.0.3" />
+		<PackageReference Include="UniversalExpressionParser" Version="1.1.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <!--<ProjectReference Include="..\OROptimizer.Shared\OROptimizer.Shared\OROptimizer.Shared.csproj" />
+	  <ProjectReference Include="..\TestsSharedLibrary\TestsSharedLibrary.csproj" />
+	  <ProjectReference Include="..\UniversalExpressionParser\UniversalExpressionParser\UniversalExpressionParser.csproj" />-->
+	</ItemGroup>
+</Project>

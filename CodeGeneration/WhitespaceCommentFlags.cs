@@ -1,0 +1,14 @@
+﻿// Copyright (c) TestsSharedLibraryForCodeParsers Project. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the solution root for license information.
+
+using System;
+
+namespace TestsSharedLibraryForCodeParsers.CodeGeneration;
+
+[Flags]
+public enum WhitespaceCommentFlags
+{
+    WhiteSpace = 1,
+    Comment = 2,
+    WhiteSpacesAndComments = WhiteSpace | Comment
+}
