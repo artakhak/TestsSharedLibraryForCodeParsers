@@ -1,9 +1,9 @@
 <Project>
     <PropertyGroup>
         <!-- Define the symbol here to apply it to all projects in the solution -->
-        <REFERENCE_OROptimizer_Shared_PROJECT>true</REFERENCE_OROptimizer_Shared_PROJECT>
-        <REFERENCE_TestsSharedLibrary_PROJECT>true</REFERENCE_TestsSharedLibrary_PROJECT>
-        <REFERENCE_UniversalExpressionParser_PROJECT>true</REFERENCE_UniversalExpressionParser_PROJECT>
+        <REFERENCE_OROptimizer_Shared_PROJECT>false</REFERENCE_OROptimizer_Shared_PROJECT>
+        <REFERENCE_TestsSharedLibrary_PROJECT>false</REFERENCE_TestsSharedLibrary_PROJECT>
+        <REFERENCE_UniversalExpressionParser_PROJECT>false</REFERENCE_UniversalExpressionParser_PROJECT>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(REFERENCE_OROptimizer_Shared_PROJECT)' == 'true'">
