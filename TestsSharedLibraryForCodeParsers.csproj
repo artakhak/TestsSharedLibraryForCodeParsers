@@ -5,8 +5,8 @@
 		<SccAuxPath>SAK</SccAuxPath>
 		<SccLocalPath>SAK</SccLocalPath>
 		<TargetFramework>net6.0</TargetFramework>
-		<PackageVersion>1.0.3</PackageVersion>
-		<Version>1.0.3</Version>
+		<PackageVersion>1.0.4</PackageVersion>
+		<Version>1.0.4</Version>
 		<EnableDefaultItems>false</EnableDefaultItems>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<Authors>Artak Hakobyan</Authors>
@@ -23,7 +23,8 @@
 		<RepositoryUrl>https://github.com/artakhak/TestsSharedLibraryForCodeParsers</RepositoryUrl>
 		<PackageTags>tests</PackageTags>
 		<PackageReleaseNotes>
-			-Couple of small changes to adjust for breaking changes in UniversalExpressionParser
+			- Referencing newer library verion
+			- Some improvements to project structure
 		</PackageReleaseNotes>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -55,13 +56,32 @@
 		<PackageReference Include="JetBrains.Annotations" Version="2021.2.0" PrivateAssets="all" ExcludeAssets="runtime">
 			<IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="OROptimizer.Shared" Version="2.2.0" />
-		<PackageReference Include="TestsSharedLibrary" Version="1.0.3" />
-		<PackageReference Include="UniversalExpressionParser" Version="1.1.0" />
+	</ItemGroup>	
+
+	<!--OROptimizer.Shared-->
+	<ItemGroup Condition="'$(Configuration)'=='Release' Or !$(DefineConstants.Contains('REFERENCE_OROptimizer_Shared_PROJECT'))">
+		<PackageReference Include="OROptimizer.Shared" Version="2.7.1" />
 	</ItemGroup>
-	<ItemGroup>
-	  <!--<ProjectReference Include="..\OROptimizer.Shared\OROptimizer.Shared\OROptimizer.Shared.csproj" />
-	  <ProjectReference Include="..\TestsSharedLibrary\TestsSharedLibrary.csproj" />
-	  <ProjectReference Include="..\UniversalExpressionParser\UniversalExpressionParser\UniversalExpressionParser.csproj" />-->
+
+	<ItemGroup Condition="'$(Configuration)'=='Debug' And $(DefineConstants.Contains('REFERENCE_OROptimizer_Shared_PROJECT'))">
+		<ProjectReference Include="..\OROptimizer.Shared\OROptimizer.Shared\OROptimizer.Shared.csproj" />
+	</ItemGroup>
+
+	<!--UniversalExpressionParser-->
+	<ItemGroup Condition="'$(Configuration)'=='Release' Or !$(DefineConstants.Contains('REFERENCE_UniversalExpressionParser_PROJECT'))">
+		<PackageReference Include="UniversalExpressionParser" Version="1.3.1" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)'=='Debug' And $(DefineConstants.Contains('REFERENCE_UniversalExpressionParser_PROJECT'))">
+		<ProjectReference Include="..\UniversalExpressionParser\UniversalExpressionParser\UniversalExpressionParser.csproj" />
+	</ItemGroup>
+
+	<!--TestsSharedLibrary-->
+	<ItemGroup Condition="'$(Configuration)'=='Release' Or !$(DefineConstants.Contains('REFERENCE_TestsSharedLibrary_PROJECT'))">
+		<PackageReference Include="TestsSharedLibrary" Version="1.0.4" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)'=='Debug' And $(DefineConstants.Contains('REFERENCE_TestsSharedLibrary_PROJECT'))">
+		<ProjectReference Include="..\TestsSharedLibrary\TestsSharedLibrary.csproj" />
 	</ItemGroup>
 </Project>

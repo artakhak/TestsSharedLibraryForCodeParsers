@@ -18,9 +18,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
+		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniversalExpressionParser", "..\UniversalExpressionParser\UniversalExpressionParser\UniversalExpressionParser.csproj", "{E5AEFFB5-3638-404A-AA76-C839C06E7618}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassVisualizer", "..\ClassVisualizer\ClassVisualizer\ClassVisualizer.csproj", "{16515F26-1929-403D-A909-3B363BFB0F26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClassVisualizer", "ClassVisualizer", "{879ED34B-CA54-4894-AC71-7D9262BE1938}"
+	ProjectSection(SolutionItems) = preProject
+		..\ClassVisualizer\Directory.Build.props = ..\ClassVisualizer\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OROptimizer.Shared", "OROptimizer.Shared", "{5889D3E1-6E3A-4ECD-A070-4B6224C0A3E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestsSharedLibrary", "TestsSharedLibrary", "{FB52C836-008E-4368-B431-69C51C4659D8}"
+	ProjectSection(SolutionItems) = preProject
+		..\TestsSharedLibrary\Directory.Build.props = ..\TestsSharedLibrary\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UniversalExpressionParser", "UniversalExpressionParser", "{7BF2432B-63FF-4F4B-9632-DC8A2754C968}"
+	ProjectSection(SolutionItems) = preProject
+		..\UniversalExpressionParser\Directory.Build.props = ..\UniversalExpressionParser\Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,14 +64,23 @@ Global
 		{E5AEFFB5-3638-404A-AA76-C839C06E7618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5AEFFB5-3638-404A-AA76-C839C06E7618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5AEFFB5-3638-404A-AA76-C839C06E7618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16515F26-1929-403D-A909-3B363BFB0F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16515F26-1929-403D-A909-3B363BFB0F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16515F26-1929-403D-A909-3B363BFB0F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16515F26-1929-403D-A909-3B363BFB0F26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{611AF3EA-DF60-4451-A530-93B057F3E421} = {62F07D3C-7B78-4B76-83AE-1688A94EF610}
-		{8944E609-BB2B-4119-AF32-EA48ADA944B4} = {62F07D3C-7B78-4B76-83AE-1688A94EF610}
-		{E5AEFFB5-3638-404A-AA76-C839C06E7618} = {62F07D3C-7B78-4B76-83AE-1688A94EF610}
+		{879ED34B-CA54-4894-AC71-7D9262BE1938} = {62F07D3C-7B78-4B76-83AE-1688A94EF610}
+		{16515F26-1929-403D-A909-3B363BFB0F26} = {879ED34B-CA54-4894-AC71-7D9262BE1938}
+		{5889D3E1-6E3A-4ECD-A070-4B6224C0A3E6} = {62F07D3C-7B78-4B76-83AE-1688A94EF610}
+		{611AF3EA-DF60-4451-A530-93B057F3E421} = {5889D3E1-6E3A-4ECD-A070-4B6224C0A3E6}
+		{FB52C836-008E-4368-B431-69C51C4659D8} = {62F07D3C-7B78-4B76-83AE-1688A94EF610}
+		{8944E609-BB2B-4119-AF32-EA48ADA944B4} = {FB52C836-008E-4368-B431-69C51C4659D8}
+		{7BF2432B-63FF-4F4B-9632-DC8A2754C968} = {62F07D3C-7B78-4B76-83AE-1688A94EF610}
+		{E5AEFFB5-3638-404A-AA76-C839C06E7618} = {7BF2432B-63FF-4F4B-9632-DC8A2754C968}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3DE847DF-2CE3-4F48-9859-7CE4986AEE81}
